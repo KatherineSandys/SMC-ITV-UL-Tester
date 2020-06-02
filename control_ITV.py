@@ -93,17 +93,17 @@ def refresh():
         color = "red"
         if j != 1: #"green" means connected, "red" means not connected
             color = "green"
-        label = tk.Label(master=frame, text=f"ITV {count + 1}", background=color, width=15, height=3)
+        label = tk.Label(master=frame, text=f"ITV {count + 1}", background=color, width=18, height=7)
         count += 1
         label.pack()
     print("Cl's: " + str(C1_1) + " " +str(Cl_2) + " " +str(Cl_3))
 
 #high and low buttons
-btn_high = tk.Button(master=window, text="HIGH", command= lambda: signal(high))
+btn_high = tk.Button(master=window, text="\nHIGH\n", command= lambda: signal(high))
 btn_high.grid(row=0, column=0, sticky="nsew")
-btn_low = tk.Button(master=window, text="LOW", command= lambda: signal(low))
+btn_low = tk.Button(master=window, text="\nLOW\n", command= lambda: signal(low))
 btn_low.grid(row=0, column=1, sticky="nsew")
-btn_refresh = tk.Button(master=window, text="refresh", command=lambda: refresh())
+btn_refresh = tk.Button(master=window, text="\nrefresh\n", command=lambda: refresh())
 btn_refresh.grid(row=0, column=2, sticky="nsew")
     
 #3 box's for the ITV's to show if connected
@@ -114,7 +114,7 @@ for j in Cl_list:
     color = "red"
     if j != 1: #"green" means connected, "red" means not connected
         color = "green"
-    label = tk.Label(master=frame, text=f"ITV {count + 1}", background=color, width=15, height=3)
+    label = tk.Label(master=frame, text=f"ITV {count + 1}", background=color, width=18, height=7)
     count += 1
     label.pack()
 
