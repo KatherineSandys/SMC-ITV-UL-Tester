@@ -24,6 +24,7 @@ You can either change the ITV's IP addresses or change the code (line 6).
 * [ITV](https://www.smcusa.com/products/ITV-Electro-Pneumatic-Regulator-w-Ethernet~133254) - The ITV's used
 * [PyQt5](https://pypi.org/project/PyQt5/) - Create the user interface
 * [pyeip]() - Used to communicate to the ITV's
+* [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) - The code runs on
 
 ## FILES
 * control_ITV_UI.py : python code that builds the interface, generated from the .ui file
