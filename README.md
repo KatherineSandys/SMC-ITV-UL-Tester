@@ -27,6 +27,7 @@ You can either change the ITV's IP addresses or change the code (line 6).
 * [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) - The code runs on
 
 ## FILES
+
 * control_ITV_UI.py : python code that builds the interface, generated from the .ui file
 * control_ITV.ui : designed by pyqt5 designer and contorls the look
 * ITV_control.py : file to run the screen, has all functionallity coded here
@@ -43,8 +44,7 @@ You can either change the ITV's IP addresses or change the code (line 6).
 
 * **Katherine Sandys** - *Initial work*
 
-
 ## Acknowledgments
 
 * Made in 2020
-* Created during my Internship at SMC
+* Created during Internship at SMC
