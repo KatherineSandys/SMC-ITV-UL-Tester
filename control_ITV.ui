@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>ITV_control</class>
+ <widget class="QMainWindow" name="ITV_control">
   <property name="enabled">
    <bool>true</bool>
   </property>
@@ -29,13 +29,13 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btn_exit">
+   <widget class="QPushButton" name="quit">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>10</y>
+      <x>620</x>
+      <y>0</y>
       <width>101</width>
-      <height>71</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -43,130 +43,205 @@
       <pointsize>20</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font:20pt &quot;MS Shell Dlg 2&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(200, 200, 200), stop:1 rgb(100, 100, 100));border: 1px solid black; border-radius: 15px;</string>
+    </property>
     <property name="text">
      <string>Quit</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_OFF">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>250</y>
-      <width>281</width>
-      <height>161</height>
+      <x>7</x>
+      <y>290</y>
+      <width>701</width>
+      <height>181</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>30</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>LOW</string>
-    </property>
+    <layout class="QHBoxLayout" name="control">
+     <item>
+      <widget class="QPushButton" name="on">
+       <property name="minimumSize">
+        <size>
+         <width>275</width>
+         <height>160</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>275</width>
+         <height>160</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>35</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font:35pt &quot;MS Shell Dlg 2&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(200, 200, 200), stop:1 rgb(100, 100, 100));border: 1px solid black; border-radius: 35px;</string>
+       </property>
+       <property name="text">
+        <string>HIGH</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="off">
+       <property name="minimumSize">
+        <size>
+         <width>275</width>
+         <height>160</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>275</width>
+         <height>160</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>35</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font:35pt &quot;MS Shell Dlg 2&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(200, 200, 200), stop:1 rgb(100, 100, 100));border: 1px solid black; border-radius: 35px;</string>
+       </property>
+       <property name="text">
+        <string>LOW</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QPushButton" name="btn_ON">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>250</y>
-      <width>271</width>
-      <height>161</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>30</pointsize>
-     </font>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="text">
-     <string>HIGH</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="label_ITV_B">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>90</y>
-      <width>581</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>40</pointsize>
-      <kerning>true</kerning>
-     </font>
-    </property>
-    <property name="text">
-     <string> IVT 2 (psi): </string>
-    </property>
-    <property name="checked">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="label_ITV_A">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
+      <x>10</x>
       <y>10</y>
-      <width>571</width>
-      <height>71</height>
+      <width>601</width>
+      <height>281</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>40</pointsize>
-      <kerning>true</kerning>
-     </font>
-    </property>
-    <property name="text">
-     <string> IVT 1 (psi): </string>
-    </property>
-    <property name="checked">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="label_ITV_C">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>170</y>
-      <width>581</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>40</pointsize>
-      <kerning>true</kerning>
-     </font>
-    </property>
-    <property name="text">
-     <string> IVT 3 (psi): </string>
-    </property>
-    <property name="checked">
-     <bool>false</bool>
-    </property>
+    <layout class="QVBoxLayout" name="output">
+     <item>
+      <widget class="QCheckBox" name="ITV_A">
+       <property name="minimumSize">
+        <size>
+         <width>600</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>600</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>35</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font:35pt &quot;MS Shell Dlg 2&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(200, 200, 200), stop:1 rgb(100, 100, 100));border: 1px solid black; border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string> IVT 1 (psi): </string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="ITV_B">
+       <property name="minimumSize">
+        <size>
+         <width>600</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>600</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>35</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font:35pt &quot;MS Shell Dlg 2&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(200, 200, 200), stop:1 rgb(100, 100, 100));border: 1px solid black; border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string> IVT 2 (psi): </string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="ITV_C">
+       <property name="minimumSize">
+        <size>
+         <width>600</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>600</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>35</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font:35pt &quot;MS Shell Dlg 2&quot;;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(200, 200, 200), stop:1 rgb(100, 100, 100));border: 1px solid black; border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string> IVT 3 (psi): </string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>720</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
