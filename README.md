@@ -5,6 +5,7 @@ This was build for the UL test for the ITV. The test has 3 ITV's connected toget
 ## Details
 
 The code uses SPI communication to control SMC ITV's that have Ethernet/IP. It is built to run on a raspberry pi with a screen attached that you can click, either with a mouse or by touch, on so you can interface with the UI and control the ITV's that are connected.
+ 
  ITV: https://www.smcusa.com/products/ITV-Electro-Pneumatic-Regulator-w-Ethernet~133254
 
 ### Running the tests
@@ -18,6 +19,18 @@ hostname3 = "192.168.1.22"  #IP address of ITV 3
 ```
 
 You can either change the ITV's IP addresses or change the code (line 6).
+
+To run the code, run the command below in the command propt to start the program. You will need to be running python 3.8.
+```
+python ITV_control.py
+```
+The package you need to have are: dpkt and pyqt5
+* 
+The commands are:
+```
+pip install dpkt
+pip install PyQt5
+```
 
 ## Built With
 
