@@ -53,7 +53,7 @@ pip install PyQt5
   * control_ITV_v2.2.py : reordering of code and comments
   * ITV EIP Set and Read.py : file that just has the code for communicating with ITV with ethernet
 
-## Authors
+## Author
 
 * **Katherine Sandys**
 
