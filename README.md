@@ -10,14 +10,11 @@ The code uses SPI communication to control SMC ITV's that have Ethernet/IP. It i
 ### Running the tests
 
 The ITV's IP address are constants listed in ITV_control.py. The defaults are listed below.
-```
-Give the example
+
 ```
 hostname1 = "192.168.1.20"  #IP address of ITV 1
 hostname2 = "192.168.1.21"  #IP address of ITV 2
 hostname3 = "192.168.1.22"  #IP address of ITV 3
-```
-until finished
 ```
 
 You can either change the ITV's IP addresses or change the code (line 6).
