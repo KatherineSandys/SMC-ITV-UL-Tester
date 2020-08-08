@@ -59,5 +59,5 @@ pip install PyQt5
 
 ## Acknowledgments
 
-* Made in 2020
+* Made in Summer 2020
 * Created during Internship at SMC
