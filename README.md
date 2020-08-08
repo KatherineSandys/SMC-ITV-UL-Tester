@@ -55,7 +55,7 @@ pip install PyQt5
 
 ## Authors
 
-* **Katherine Sandys** - *Initial work*
+* **Katherine Sandys**
 
 ## Acknowledgments
 
