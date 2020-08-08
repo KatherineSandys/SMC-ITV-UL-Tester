@@ -1,5 +1,7 @@
 Description:
-  The code uses SPI communication to control SMC ITV's that have Ethernet/IP. It is built to run on a raspberry pi with a screen attached that you can click on so you can interface with the UI and control the ITV's.
+  This was build for the UL test for the ITV. The test has 3 ITV's connected together. 
+  The code uses SPI communication to control SMC ITV's that have Ethernet/IP. It is built to run on a raspberry pi with a screen attached that you can click on so you can interface with the UI and control the ITV's. 
+   ITV: https://www.smcusa.com/products/ITV-Electro-Pneumatic-Regulator-w-Ethernet~133254
 
 THE FILES:
   control_ITV_UI.py : python code that builds the interface, generated from the .ui file
