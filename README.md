@@ -28,6 +28,18 @@ You can either change the ITV's IP addresses or change the code (line 6).
 * [PyQt5](https://pypi.org/project/PyQt5/) - Create the user interface
 * [pyeip]() - Used to communicate to the ITV's
 
+## FILES
+* control_ITV_UI.py : python code that builds the interface, generated from the .ui file
+* control_ITV.ui : designed by pyqt5 designer and contorls the look
+* ITV_control.py : file to run the screen, has all functionallity coded here
+* pyeip.py : File that
+* Older versions folder:
+  * control_ITV_v1.0.py : first working version with tktinker
+  * control_ITV_v1.1.py : using qt5 now for interface
+  * control_ITV_v2.0.py : comments added, removed btntest function,
+  * control_ITV_v2.1.py : controlling the user interface with python
+  * control_ITV_v2.2.py : reordering of code and comments
+  * ITV EIP Set and Read.py : file that just has the code for communicating with ITV with ethernet
 
 ## Authors
 
