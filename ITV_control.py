@@ -22,7 +22,7 @@ class window(QtWidgets.QMainWindow):
         self.ui = Ui_ITV_control()
         self.ui.setupUi(self) #set up ui
         self.ui.quit.clicked.connect(button_quit) #quit button
-        self.show() #dont want to show the screen on load
+        self.show() #want to show to show the screen on load
         #button to triggers give input to ITVs that are connected
         self.ui.on.clicked.connect(lambda: button_response("on"))
         self.ui.off.clicked.connect(lambda: button_response("off"))
@@ -42,13 +42,13 @@ def button_quit():
 
 #button responses for high and low button
 def button_response(name):
-    if name == "on":      #sets value to button being pushed
+    if name == "on": #sets value to button being pushed
         value = 4095
-        print(str(value))
+        #print(str(value))
     if name == "off":
         value = 0
-        print(str(value))
-    if C_A != 1: #writes new count value to the connected ITV
+        #print(str(value))
+    if C_A != 1: #trys to write new count value if the ITV is connected
         #print("Attempting to write")
         x = value.to_bytes(2, "little") #change to bytes
         data = pyeip.struct.pack("BB", x[0], x[1]) #format the vale to send out
@@ -57,7 +57,7 @@ def button_response(name):
             r = C_A.setAttrSingle(0x64, 0x64, 0x03, data) #write data to ITV
             #if r[0] != 0:
                 #print("Failed to write")
-    if C_B != 1: #writes new count value to the connected ITV
+    if C_B != 1: #trys to write new count value if the ITV is connected
         #print("Attempting to write")
         x = value.to_bytes(2, "little") #change to bytes
         data = pyeip.struct.pack("BB", x[0], x[1])
@@ -66,7 +66,7 @@ def button_response(name):
             r = C_B.setAttrSingle(0x64, 0x64, 0x03, data) #write data to ITV
             #if r[0] != 0:
                 #print("Failed to write")
-    if C_C != 1: #writes new count value to the connected ITV
+    if C_C != 1:#trys to write new count value if the ITV is connected
         #print("Attempting to write")
         x = value.to_bytes(2, "little") #change to bytes
         data = pyeip.struct.pack("BB", x[0], x[1])
@@ -79,34 +79,32 @@ def button_response(name):
 # Connection is only attempted and data is sent when a checkbox is active. If previous attempt fails,
 # need to uncheck and recheck box to attempt another connection
 def check_connection(c, ITV):
-    if c.isChecked() == True:       #executes at checkbox state change, only executes if checked
-        if ITV == 1:                #ITV variable selects which ITV should be connected
-            print("Attempting to connect...")
+    if c.isChecked() == True: #executes if checkbox is checked
+        if ITV == 1: #ITV variable selects which ITV should be connected
+            #print("Attempting to connect...")
             try:    #attempt to connect ITV1
                 global EIP_1, C_A
                 EIP_1= pyeip.EtherNetIP(hostname1)
                 C_A = EIP_1.explicit_conn(hostname1)
             except Exception:   #general catch-all error handler, triggers if no connection detected
                 C_A = 1  #set C_A back to disconnected state
-
         elif ITV == 2:  # checks whatever ITV is specified by variable ITV (passed in from checkbox)
-            print("Attempting to connect...")
+            #print("Attempting to connect...")
             try:
                 global EIP_2, C_B
                 EIP_2= pyeip.EtherNetIP(hostname2)
                 C_B = EIP_2.explicit_conn(hostname2)
             except Exception:
-                #self.label_ITV_B.setText("ITV 2 (psi): " + str(pressure))
                 C_B = 1
         elif ITV == 3:
-            print("Attempting to connect...")
+            #print("Attempting to connect...")
             try:
                 global EIP_3, C_C
                 EIP_3= pyeip.EtherNetIP(hostname3)
                 C_C = EIP_3.explicit_conn(hostname3)
             except Exception:
                 C_C = 1
-    else:       # no connection found, set C_# to non-connected state
+    else: #no connection found, set C_# to non-connected state
         #print("Not Connected")
         if ITV == 1:
             C_A = 1
