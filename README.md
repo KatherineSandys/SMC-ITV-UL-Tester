@@ -25,8 +25,6 @@ To run the code, run the command below in the command propt to start the program
 python ITV_control.py
 ```
 The package you need to have are: dpkt and pyqt5
-* 
-The commands are:
 ```
 pip install dpkt
 pip install PyQt5
